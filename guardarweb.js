@@ -1,4 +1,3 @@
-
 // Función para crear una cookie con un nombre y un valor dados
 function crearCookie(nombre, valor) {
   document.cookie = nombre + "=" + valor + ";path=/";
@@ -95,11 +94,21 @@ var cookie = leerCookie("quieroguardarestaweb");
 
 // Si no existe la cookie
 if (cookie == "") {
-  // Crear un elemento botón con el texto "Guardar esta web"
+ // Crear un elemento botón con el texto "Guardar esta web"
   var boton = document.createElement("button");
   boton.textContent = "Guardar esta web";
 
-// Añadir un evento al botón para que al hacer clic se cree la cookie y se descargue la página web actual
+  // Añadir algunas propiedades de estilo al botón para que sea flotante y esté en la esquina izquierda superior
+  boton.style.position = "fixed";
+  boton.style.top = "0";
+  boton.style.left = "0";
+  boton.style.zIndex = "9999";
+  boton.style.backgroundColor = "blue";
+  boton.style.color = "white";
+  boton.style.padding = "10px";
+  boton.style.fontSize = "20px";
+
+  // Añadir un evento al botón para que al hacer clic se cree la cookie y se descargue la página web actual
   boton.addEventListener("click", function () {
     // Crear la cookie con el nombre "quieroguardarestaweb" y el valor "si"
     crearCookie("quieroguardarestaweb", "si");
