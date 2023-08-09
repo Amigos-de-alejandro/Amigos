@@ -1,12 +1,12 @@
 {
     "background_color": "#ffffff",
-    "description": "PWA para acceder al sitio web https://apuntesdederechoespanol.blogspot.com como aplicación móvil",
+    "description": "PWA para acceder al sitio web https://apuntesdederechoespanol.blogspot.com como aplicación móvil o de windows; no se preocupe si se le redirecciona, hace eso dado que la app esta alojada en GitHub",
     "dir": "ltr",
     "display": "standalone",
-    "name": "apuntesdederechoespanol.github",
+    "name": "Apuntes de Derecho Español",
     "orientation": "any",
     "scope": "/",
-    "short_name": "apuntesdederechoespanol.github",
+    "short_name": "APdE",
     "start_url": "/",
     "theme_color": "#ffffff",
     "categories": [
