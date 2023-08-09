@@ -40,10 +40,42 @@
             cursor: pointer;
         }
     </style>
+    <script>
+        // Esta variable guardará el evento para usarlo más tarde.
+        let deferredPrompt;
+
+        window.addEventListener('beforeinstallprompt', (e) => {
+          // Evita que aparezca el mini-infobar o el diálogo de instalación predeterminado en el móvil
+          e.preventDefault();
+          // Guarda el evento porque lo necesitarás para activarlo más tarde.
+          deferredPrompt = e;
+          // Muestra tu propio diálogo de instalación personalizado para tu PWA
+          showInAppInstallPromotion();
+        });
+
+        // Luego, puedes comprobar si la PWA está en modo standalone (instalada) o no
+        if (window.matchMedia(' (display-mode: standalone)').matches) {
+          // La PWA está instalada, redirige al usuario a tu blog
+          window.location.href = 'https://apuntesdederechoespanol.blogspot.com';
+        } else {
+          // La PWA no está instalada, muestra un botón o un elemento de interfaz para que el usuario pueda instalarla
+          // Cuando el usuario haga clic en el botón, llama al método prompt() del evento guardado
+          installButton.addEventListener('click', async () => {
+            // Muestra el diálogo de instalación del navegador
+            deferredPrompt.prompt();
+            // Espera a que el usuario responda a la pregunta
+            const { outcome } = await deferredPrompt.userChoice;
+            // Analiza la respuesta del usuario
+            console.log(`User response to the install prompt: ${outcome}`);
+            // Ya no necesitas el evento guardado, borralo
+            deferredPrompt = null;
+          });
+        }
+    </script>
 </head>
 <body>
     <div class="container">
-        <img src="logo.png" alt="Logo" class="logo">
+        <img src="^6^" alt="Logo" class="logo">
         <h1 class="title">Apuntes de Derecho Español</h1>
         <h2 class="subtitle">Bienvenido a la app de tu blog favorito</h2>
         <button class="button" onclick="window.location.href='https://apuntesdederechoespanol.blogspot.com'">Ir al blog</button>
