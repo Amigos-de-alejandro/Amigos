@@ -17,7 +17,7 @@
     "screenshots": [],
     "icons": [
        {
-      "src": "windows11/LargeTile.scale-150.png",
+      "src": "logo.png",
       "sizes": "465x465",
 	"type": "image/png",
       "purpose": "any"
