@@ -15,14 +15,7 @@
         "social"
     ],
     "screenshots": [],
-    "icons": [
-       {
-      "src": "logo.png",
-      "sizes": "465x465",
-	"type": "image/png",
-      "purpose": "any"
-    },
-  ]
+    "icons": [{"src": "logo.png", "sizes": "465x465" }]
     "shortcuts": [],
     "display_override": [
         "standalone",
