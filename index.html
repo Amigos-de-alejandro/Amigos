@@ -206,6 +206,25 @@
                 .catch(err => console.log('Error al registrar el service worker', err));
             }
         });
+    // Primero, comprueba si la web es una PWA usando la API getInstalledRelatedApps
+let isPWA = false;
+navigator.getInstalledRelatedApps().then((apps) => {
+  if (apps.length > 0) {
+    isPWA = true;
+  }
+});
+
+// Luego, comprueba si la web está en modo standalone usando una media query
+let isStandalone = false;
+if (window.matchMedia('(display-mode: standalone)').matches) {
+  isStandalone = true;
+}
+
+// Finalmente, si la web es una PWA y está en modo standalone, redirige al usuario a la página deseada
+if (isPWA && isStandalone) {
+  window.location.href = 'https://apuntesdederechoespanol.blogspot.com/p/indice.html';
+}
+
     </script>
 
 </body>
