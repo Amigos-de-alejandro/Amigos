@@ -15,8 +15,7 @@
         "social"
     ],
     "screenshots": [],
-    "icons": [{
-  "icons": [
+    "icons": [
     {
       "src": "windows11/SmallTile.scale-100.png",
       "sizes": "71x71"
@@ -466,7 +465,6 @@
       "sizes": "1024x1024"
     }
   ]
-}],
     "shortcuts": [],
     "display_override": [
         "standalone",
