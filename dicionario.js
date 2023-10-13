@@ -4,6 +4,8 @@ var diccionario = {
   "JS": "https://developer.mozilla.org/es/docs/Web/JavaScript",
   "HTML": "https://developer.mozilla.org/es/docs/Web/HTML",
   "CSS": "https://developer.mozilla.org/es/docs/Web/CSS",
+  "ERL": "https://www.boe.es/eli/es/rdlg/2010/07/02/1/con"
+  "emprendedor de responsabilidad limitada": "https://www.boe.es/eli/es/rdlg/2010/07/02/1/con"
   // Añadir más pares clave-valor según se desee
 };
 
