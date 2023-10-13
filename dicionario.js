@@ -1,75 +1,17 @@
-// Crear un objeto que almacene las palabras, frases y abreviaciones como claves y los enlaces como valores
-var diccionario = {
-  "Bing": "https://www.bing.com/",
-  "JS": "https://developer.mozilla.org/es/docs/Web/JavaScript",
-  "HTML": "https://developer.mozilla.org/es/docs/Web/HTML",
-  "CSS": "https://developer.mozilla.org/es/docs/Web/CSS",
-  "ERL": "https://www.boe.es/eli/es/rdlg/2010/07/02/1/con"
-  "emprendedor de responsabilidad limitada": "https://www.boe.es/eli/es/rdlg/2010/07/02/1/con"
-  // Añadir más pares clave-valor según se desee
-};
+# Definir una referencia de ejemplo
+referencia = {"ERL": "https://www.boe.es/eli/es/rdlg/2010/07/02/1/con",
+              "emprendedor de responsabilidad limitada": "https://www.boe.es/eli/es/rdlg/2010/07/02/1/con"}
 
-// Crear una función que busque las palabras del diccionario en el contenido de la web y les añada el enlace correspondiente
-function insertarEnlaces() {
-  // Obtener el elemento que contiene el contenido de la web
-  var contenido = document.getElementById("contenido");
-  // Obtener el texto del contenido
-  var texto = contenido.textContent;
-  // Recorrer las claves del diccionario
-  for (var palabra in diccionario) {
-    // Crear una expresión regular que busque la palabra en el texto, ignorando mayúsculas y minúsculas
-    var regex = new RegExp("\\b" + palabra + "\\b", "gi");
-    // Reemplazar la palabra por un elemento <a> con el enlace correspondiente
-    var reemplazo = "<a href='" + diccionario[palabra] + "'>" + palabra + "</a>";
-    // Actualizar el texto con el reemplazo
-    texto = texto.replace(regex, reemplazo);
-  }
-  // Actualizar el contenido de la web con el nuevo texto
-  contenido.innerHTML = texto;
-}
+# Definir una función que busque las palabras clave en un texto y les añada el enlace correspondiente
+def añadir_enlaces(texto, referencia):
+  # Recorrer las palabras clave y sus enlaces
+  for palabra, enlace in referencia.items():
+    # Reemplazar la palabra por el código HTML del enlace
+    texto = texto.replace(palabra, f"<a href='{enlace}'>{palabra}</a>")
+  # Devolver el texto modificado
+  return texto
 
-// Llamar a la función cuando se cargue la página
-window.onload = insertarEnlaces;
-
-// Crear una variable que almacene el elemento que contiene el contenido de la web
-var contenido = document.getElementById("contenido");
-// Crear una función que busque las palabras del diccionario en el contenido de la web y les añada el enlace correspondiente
-function insertarEnlaces() {
-  // Obtener el texto del contenido
-  var texto = contenido.textContent;
-  // Recorrer las claves del diccionario
-  for (var palabra in diccionario) {
-    // Crear una expresión regular que busque la palabra en el texto, ignorando mayúsculas y minúsculas
-    var regex = new RegExp("\\b" + palabra + "\\b", "gi");
-    // Reemplazar la palabra por un elemento <a> con el enlace correspondiente
-    var reemplazo = "<a href='" + diccionario[palabra] + "'>" + palabra + "</a>";
-    // Actualizar el texto con el reemplazo
-    texto = texto.replace(regex, reemplazo);
-  }
-  // Actualizar el contenido de la web con el nuevo texto
-  contenido.innerHTML = texto;
-}
-// Crear una función que cree un observador de mutaciones para el elemento contenido
-function crearObservador() {
-  // Crear una instancia de MutationObserver
-  var observador = new MutationObserver(function(mutaciones) {
-    // Recorrer las mutaciones
-    for (var mutacion of mutaciones) {
-      // Comprobar si la mutación es de tipo caracterData
-      if (mutacion.type === "characterData") {
-        // Llamar a la función insertarEnlaces
-        insertarEnlaces();
-        // Salir del bucle
-        break;
-      }
-    }
-  });
-  // Configurar las opciones del observador
-  var opciones = {childList: true, characterData: true, subtree: true};
-  // Iniciar la observación del elemento contenido
-  observador.observe(contenido, opciones);
-}
-// Llamar a la función insertarEnlaces cuando se cargue la página
-window.onload = insertarEnlaces;
-// Llamar a la función crearObservador cuando se cargue la página
-window.onload = crearObservador;
+# Ejemplo de uso de la función
+texto = "Un emprendedor de responsabilidad limitada es una figura jurídica que permite a los autónomos proteger su vivienda habitual de posibles embargos derivados de su actividad profesional. Para acogerse a esta modalidad, se debe inscribir la vivienda en el Registro Mercantil y cumplir una serie de requisitos. El ERL se creó mediante el Real Decreto Legislativo 1/2010, de 2 de julio."
+texto_modificado = añadir_enlaces(texto, referencia)
+print(texto_modificado)
