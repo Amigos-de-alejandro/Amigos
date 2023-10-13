@@ -1,5 +1,5 @@
 // Crear una variable que almacene la ruta del archivo JSON
-var ruta = "https://apdespanol.github.io/APdE.github.io/diccionario.json";
+var ruta = "diccionario.json";
 // Crear una variable que almacene el objeto diccionario vacío
 var diccionario = {};
 // Crear una función asíncrona que lea el archivo JSON y lo guarde en el diccionario
