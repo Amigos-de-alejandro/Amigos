@@ -1,43 +1,43 @@
-    // Obtenemos los elementos <item> que contienen las normas
-    var items = xml.getElementsByTagName("item");
-
-    // Si hay algún elemento <item>, los recorremos
-    if (items.length > 0) {
-      for (var i = 0; i < items.length; i++) {
-        // Obtenemos el título, el resumen y el enlace de cada norma
-        var titulo = items[i].getElementsByTagName("titulo")[0].textContent;
-        var resumen = items[i].getElementsByTagName("resumen")[0].textContent;
-        var enlace = items[i].getElementsByTagName("enlace")[0].textContent;
-
-        // Creamos un elemento <div> para mostrar cada norma
-        var div = document.createElement("div");
-
-        // Creamos un elemento <h3> para mostrar el título como un enlace
-        var h3 = document.createElement("h3");
-        var a = document.createElement("a");
-        a.href = enlace;
-        a.target = "_blank";
-        a.textContent = titulo;
-        h3.appendChild(a);
-
-        // Creamos un elemento <p> para mostrar el resumen
-        var p = document.createElement("p");
-        p.textContent = resumen;
-
-        // Añadimos los elementos al div
-        div.appendChild(h3);
-        div.appendChild(p);
-
-        // Añadimos el div al elemento de resultados
-        resultados.appendChild(div);
-      }
-    } else {
-      // Si no hay ningún elemento <item>, mostramos un mensaje
-      resultados.innerHTML = "No se han encontrado normas que contengan el término '" + term + "' en el BOE del día " + fecha.toLocaleDateString("es-ES");
-    }
+// Crear una variable que almacene la ruta del archivo JSON
+var ruta = "datos.json";
+// Crear una variable que almacene el objeto diccionario vacío
+var diccionario = {};
+// Crear una función asíncrona que lea el archivo JSON y lo guarde en el diccionario
+async function leerArchivo() {
+  // Usar la función fetch para obtener el archivo
+  var respuesta = await fetch(ruta);
+  // Comprobar si la respuesta es correcta
+  if (respuesta.ok) {
+    // Convertir la respuesta en un objeto JavaScript usando JSON.parse
+    var datos = await respuesta.json();
+    // Asignar los datos al diccionario
+    diccionario = datos;
+    // Llamar a la función insertarEnlaces
+    insertarEnlaces();
+  } else {
+    // Mostrar un mensaje de error
+    console.log("Error al leer el archivo");
   }
-})
-.catch(function(error) {
-  // Si hay algún error, lo mostramos
-  resultados.innerHTML = "Error al consultar el BOE: " + error;
-});
+}
+
+// Crear una función que busque las palabras del diccionario en el contenido de la web y les añada el enlace correspondiente
+function insertarEnlaces() {
+  // Obtener el elemento que contiene el contenido de la web
+  var contenido = document.getElementById("contenido");
+  // Obtener el texto del contenido
+  var texto = contenido.textContent;
+  // Recorrer las claves del diccionario
+  for (var palabra in diccionario) {
+    // Crear una expresión regular que busque la palabra en el texto, ignorando mayúsculas y minúsculas
+    var regex = new RegExp("\\b" + palabra + "\\b", "gi");
+    // Reemplazar la palabra por un elemento <a> con el enlace correspondiente
+    var reemplazo = "<a href='" + diccionario[palabra] + "'>" + palabra + "</a>";
+    // Actualizar el texto con el reemplazo
+    texto = texto.replace(regex, reemplazo);
+  }
+  // Actualizar el contenido de la web con el nuevo texto
+  contenido.innerHTML = texto;
+}
+
+// Llamar a la función leerArchivo cuando se cargue la página
+window.onload = leerArchivo;
