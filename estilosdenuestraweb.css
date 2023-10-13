@@ -498,3 +498,11 @@ grid-template-columns : repeat (auto-fit , minmax (200 px ,1 fr)); / * Reducir e
 }
 
 }
+
+/* Seleccionamos todos los elementos <p> */
+p {
+  /* Usamos la propiedad text-align con el valor justify para alinear el texto a ambos márgenes */
+  text-align: justify;
+}
+
+/*Fin actualizaciones del 13/10/23*/
