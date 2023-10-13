@@ -2,6 +2,6 @@
 
 El enlace de la pagina es https://apdespanol.github.io/APdE.github.io
 
-Informacion
--Index es el archivo que maneja el anuncio de la web de cuales son las ultimas entradas publicadas
--diccionario es el archivo que deve incorporar enlaces a las palabra claves de la web, enlaces de interes automaticos
+<h1>Informacion</h1>h1>
+<p></p>-Index es el archivo que maneja el anuncio de la web de cuales son las ultimas entradas publicadas<p></p>
+
