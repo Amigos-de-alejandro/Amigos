@@ -42,7 +42,7 @@ function comparar(evento) {
               var hash2 = CryptoJS.SHA256(CryptoJS.lib.WordArray.create(reader2.result)).toString();
               // Comparamos los hashes y mostramos el resultado en el div
               if (hash1 == hash2) {
-                resultado.innerHTML += "<9>Los archivos son iguales<p>";
+                resultado.innerHTML += "<p>Los archivos son iguales<p>";
               } else {
                 resultado.innerHTML += "<p>Los archivos son diferentes</p>";
               }
