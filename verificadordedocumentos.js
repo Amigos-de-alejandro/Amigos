@@ -8,7 +8,10 @@ var resultado = document.getElementById("resultado");
 var matriz = [
   "https://apdespanol.github.io/APdE.github.io/doc/Derecho%20Administrativo%20III.pdf",
   "https://apdespanol.github.io/APdE.github.io/doc/Teoría del Derecho.pdf",
-  "https://apdespanol.github.io/APdE.github.io/doc/inst basicas del derecho.pdf"
+  "https://apdespanol.github.io/APdE.github.io/doc/inst basicas del derecho.pdf",
+  "https://apdespanol.github.io/APdE.github.io/doc/historia%20del%20derecho.pdf",
+  "https://apdespanol.github.io/APdE.github.io/doc/derecho%20romano.pdf",
+  "https://apdespanol.github.io/APdE.github.io/doc/Derecho%20Constitucional.pdf"
 ];
 
 // Añadimos un evento al botón para que al pulsarlo se ejecute la función comparar
