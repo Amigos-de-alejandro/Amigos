@@ -1,13 +1,17 @@
 // Esta es la misma función que te mostré antes
 function comprobarEnlace(enlace) {
   var dominio = window.location.hostname;
-  if (enlace.hostname != dominio) {
+  // Añadimos una variable para el enlace especial que no queremos comprobar
+  var enlaceEspecial = "https://apdespanol.github.io/APdE.github.io";
+  // Comprobamos si el enlace es diferente del dominio y del enlace especial
+  if (enlace.hostname != dominio && enlace.href != enlaceEspecial) {
     var mensaje = "Estás a punto de salir de " + dominio + " y visitar " + enlace.href + ". ¿Estás seguro de que quieres continuar?";
     return confirm(mensaje);
   } else {
     return true;
   }
 }
+
 
 // Esta es la nueva función que recorre todos los elementos <a> y les añade el atributo onclick
 function aplicarFuncionATodosLosEnlaces() {
