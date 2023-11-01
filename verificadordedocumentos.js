@@ -1,3 +1,4 @@
+resultado.innerHTML = "<h2>Analizando archivo</h2>"
 // Obtenemos el formulario, el campo de archivo, el botón y el div de resultado
 var formulario = document.getElementById("miFormulario");
 var archivo = document.getElementById("archivo");
