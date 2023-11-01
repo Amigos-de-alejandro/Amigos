@@ -6,9 +6,9 @@ var resultado = document.getElementById("resultado");
 
 // Definimos una matriz o lista con las direcciones de los archivos que queremos comparar
 var matriz = [
-  "https://example.com/documento1.pdf",
-  "https://example.com/documento2.pdf",
-  "https://example.com/documento3.pdf"
+  "https://apdespanol.github.io/APdE.github.io/doc/Derecho%20Administrativo%20III.pdf",
+  "https://apdespanol.github.io/APdE.github.io/doc/Teoría del Derecho.pdf",
+  "https://apdespanol.github.io/APdE.github.io/doc/inst basicas del derecho.pdf"
 ];
 
 // Añadimos un evento al botón para que al pulsarlo se ejecute la función comparar
