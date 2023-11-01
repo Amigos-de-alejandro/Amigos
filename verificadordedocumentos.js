@@ -42,9 +42,9 @@ function comparar(evento) {
               var hash2 = CryptoJS.SHA256(CryptoJS.lib.WordArray.create(reader2.result)).toString();
               // Comparamos los hashes y mostramos el resultado en el div
               if (hash1 == hash2) {
-                resultado.innerHTML += "<p>Los archivos son iguales</p>";
+                resultado.innerHTML += "<h3>Los archivos son iguales</h3>";
               } else {
-                resultado.innerHTML += "<p>Los archivos son diferentes</p>";
+                resultado.innerHTML += "<h3>Los archivos son diferentes</h3>";
               }
             };
             reader2.readAsArrayBuffer(blob);
@@ -54,6 +54,6 @@ function comparar(evento) {
     reader.readAsArrayBuffer(archivoSeleccionado);
   } else {
     // Mostramos un mensaje de error si no se ha seleccionado ningún archivo
-    resultado.innerHTML = "<p>No se ha seleccionado ningún archivo</p>";
+    resultado.innerHTML = "<h3>No se ha seleccionado ningún archivo</h3>";
   }
 }
