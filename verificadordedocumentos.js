@@ -3,7 +3,6 @@ var formulario = document.getElementById("miFormulario");
 var archivo = document.getElementById("archivo");
 var boton = formulario.querySelector("button");
 var resultado = document.getElementById("resultado");
-var paquitorepuesta=1
 
 // Definimos una matriz o lista con las direcciones de los archivos que queremos comparar
 var matriz = [
@@ -47,20 +46,14 @@ function comparar(evento) {
               var hash2 = CryptoJS.SHA256(CryptoJS.lib.WordArray.create(reader2.result)).toString();
               // Comparamos los hashes y mostramos el resultado en el div
               if (hash1 == hash2) {
-                var paquitorepuesta = (paquitorepuesta + 1);
+                resultado.innerHTML += "<p>Los archivos son iguales<p>";
               } else {
-                ;
+                resultado.innerHTML += "<p>Los archivos son diferentes</p>";
               }
             };
             reader2.readAsArrayBuffer(blob);
           });
       }
-               if (paquitorespuesta > 0) {
-                resultado.innerHTML += "<p>Los archivos son iguales<p>";
-              } else {
-                resultado.innerHTML += "<p>Los archivos son diferentes</p>";
-              }
-      
     };
     reader.readAsArrayBuffer(archivoSeleccionado);
   } else {
