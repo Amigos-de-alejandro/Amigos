@@ -1,7 +1,8 @@
 // Cargar la biblioteca PDF.js (insertado en web)
 
 // Escribir el código JavaScript para detectar y reemplazar los iframes de PDF
-<script>
+
+
   // Definir las variables globales
   var pdfDoc = null; // El documento PDF
   var pageNum = 1; // El número de página actual
@@ -162,4 +163,3 @@
       continue;
     }
   }
-</script>
