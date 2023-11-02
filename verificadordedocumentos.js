@@ -11,7 +11,8 @@ var matriz = [
   "https://apdespanol.github.io/APdE.github.io/doc/inst basicas del derecho.pdf",
   "https://apdespanol.github.io/APdE.github.io/doc/historia%20del%20derecho.pdf",
   "https://apdespanol.github.io/APdE.github.io/doc/derecho%20romano.pdf",
-  "https://apdespanol.github.io/APdE.github.io/doc/Derecho%20Constitucional.pdf"
+  "https://apdespanol.github.io/APdE.github.io/doc/Derecho%20Constitucional.pdf",
+  "https://apdespanol.github.io/APdE.github.io/doc/Derecho%20Financiero%20y%20Tributario%20I.pdf"
 ];
 
 // Añadimos un evento al botón para que al pulsarlo se ejecute la función comparar
