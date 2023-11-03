@@ -3,7 +3,7 @@ var formulario = document.getElementById("miFormulario");
 var archivo = document.getElementById("archivo");
 var boton = formulario.querySelector("button");
 var resultado = document.getElementById("resultado");
-
+var igualitydifrent = 0
 // Definimos una matriz o lista con las direcciones de los archivos que queremos comparar
 var matriz = [
   "https://apdespanol.github.io/APdE.github.io/doc/Derecho%20Administrativo%20III.pdf",
@@ -59,14 +59,19 @@ function comparar(evento) {
               var hash2 = CryptoJS.SHA256(CryptoJS.lib.WordArray.create(reader2.result)).toString();
               // Comparamos los hashes y mostramos el resultado en el div
               if (hash1 == hash2) {
-                resultado.innerHTML += "<p>Los archivos son iguales<p>";
+                var igualitydifrent = 1;
               } else {
-                resultado.innerHTML += "<p>Los archivos son diferentes</p>";
+                
               }
             };
             reader2.readAsArrayBuffer(blob);
           });
       }
+      if (igualitydifrent == 1) {
+                resultado.innerHTML += "<p>Los archivos son iguales<p>";
+              } else {
+                resultado.innerHTML += "<p>Los archivos son diferentes</p>";
+              }
     };
     reader.readAsArrayBuffer(archivoSeleccionado);
   } else {
