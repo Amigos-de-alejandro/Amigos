@@ -12,7 +12,20 @@ var matriz = [
   "https://apdespanol.github.io/APdE.github.io/doc/historia%20del%20derecho.pdf",
   "https://apdespanol.github.io/APdE.github.io/doc/derecho%20romano.pdf",
   "https://apdespanol.github.io/APdE.github.io/doc/Derecho%20Constitucional.pdf",
-  "https://apdespanol.github.io/APdE.github.io/doc/Derecho%20Financiero%20y%20Tributario%20I.pdf"
+  "https://apdespanol.github.io/APdE.github.io/doc/Derecho%20Financiero%20y%20Tributario%20I.pdf",
+  "https://apdespanol.github.io/APdE.github.io/doc/Derecho%20Civil%20II.pdf",
+  "https://apdespanol.github.io/APdE.github.io/doc/Derecho%20Civil%201.pdf",
+  "https://apdespanol.github.io/APdE.github.io/doc/Instbas%20civil.pdf",
+  "https://apdespanol.github.io/APdE.github.io/doc/Derecho%20Mercantil%20I,%20Tomo%20I.pdf",
+  "https://apdespanol.github.io/APdE.github.io/doc/Derecho%20Mercantil%20I,%20Tomo%20II.pdf",
+  "https://apdespanol.github.io/APdE.github.io/doc/Derecho%20Penal%20II.pdf",
+  "https://apdespanol.github.io/APdE.github.io/doc/Derecho%20Penal%20I.pdf",
+  "https://apdespanol.github.io/APdE.github.io/doc/Introduci%C3%B3n%20al%20Derecho%20Penal.pdf",
+  "https://apdespanol.github.io/APdE.github.io/doc/Instituciones%20y%20Derecho%20de%20la%20Union%20Europea.pdf",
+  "https://apdespanol.github.io/APdE.github.io/doc/Derecho%20Internacional%20Publico%20I.pdf",
+  "https://apdespanol.github.io/APdE.github.io/doc/Derecho%20Internacional%20Publico%20II.pdf",
+  "https://apdespanol.github.io/APdE.github.io/doc/Derecho%20Administrativo%20I.pdf",
+  "https://apdespanol.github.io/APdE.github.io/doc/Derecho%20Administrativo%20II.pdf"
 ];
 
 // Añadimos un evento al botón para que al pulsarlo se ejecute la función comparar
