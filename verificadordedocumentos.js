@@ -31,7 +31,22 @@ var matriz = [
 // Añadimos un evento al botón para que al pulsarlo se ejecute la función comparar
 boton.addEventListener("click", comparar);
 
-// Definimos la función comparar, que recibe un evento como parámetro
+// Esta función muestra la expresión "ejecutando..." en un elemento HTML con el id "mensaje"
+function mostrarMensaje() {
+  var mensaje = document.getElementById("mensaje");
+  mensaje.innerHTML = "ejecutando...";
+}
+
+// Esta función oculta la expresión "ejecutando..." cuando la función comparar(evento) termina de ejecutarse
+function ocultarMensaje() {
+  var mensaje = document.getElementById("mensaje");
+  mensaje.innerHTML = "";
+}
+
+// Esta función es la que quieres ejecutar en tu web
+function comparar(evento) {
+  // Aquí va el código de tu función
+  // Definimos la función comparar, que recibe un evento como parámetro
 function comparar(evento) {
   // Evitamos que el formulario se envíe al servidor
   evento.preventDefault();
@@ -74,3 +89,24 @@ function comparar(evento) {
     resultado.innerHTML = "<h3>No se ha seleccionado ningún archivo</h3>";
   }
 }
+}
+
+// Esta función se ejecuta cuando se dispara el evento que quieres capturar
+function manejarEvento(evento) {
+  // Primero mostramos el mensaje
+  mostrarMensaje();
+  // Luego ejecutamos la función comparar(evento) de forma asíncrona usando una promesa
+  var promesa = new Promise(function(resolve, reject) {
+    comparar(evento);
+    resolve();
+  });
+  // Finalmente ocultamos el mensaje cuando la promesa se resuelve
+  promesa.then(function() {
+    ocultarMensaje();
+  });
+}
+
+// Aquí puedes añadir el código para asignar la función manejarEvento al evento que quieras
+// Por ejemplo, si quieres que se ejecute al hacer clic en un botón con el id "boton"
+var boton = document.getElementById("boton");
+boton.addEventListener("click", manejarEvento);
