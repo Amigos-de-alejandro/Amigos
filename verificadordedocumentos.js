@@ -60,9 +60,7 @@ function comparar(evento) {
               // Comparamos los hashes y mostramos el resultado en el div
               if (hash1 == hash2) {
                 var igualitydifrent = 1;
-              } else {
-                
-              }
+              } 
             };
             reader2.readAsArrayBuffer(blob);
           });
