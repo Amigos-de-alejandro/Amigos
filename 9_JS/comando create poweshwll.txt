@@ -1,0 +1,5 @@
+Add-Type -AssemblyName System.Security
+$rsa = New-Object System.Security.Cryptography.RSACryptoServiceProvider(3072)
+$rsa.ToXmlString($true) | Out-File -Encoding ASCII -FilePath C:\Users\manue\Downloads\clave_privada.txt
+$rsa.PublicOnly = $false
+$rsa.ToXmlString($true) | Out-File -Encoding ASCII -FilePath C:\Users\manue\Downloads\clave_publica.txt
