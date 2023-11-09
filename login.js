@@ -12,7 +12,7 @@ submit.addEventListener("click", function(event) {
     // Evitamos que el formulario se envíe por defecto
     event.preventDefault();
     // Hacemos una petición al servidor para obtener el archivo json con los datos de verificación
-    fetch("9_JS/user.json")
+    fetch("https://amigos-de-alejandro.github.io/Amigos/9_JS/user.json")
         .then(function(response) {
             // Convertimos la respuesta en un objeto javascript
             return response.json();
