@@ -1,19 +1,27 @@
 // login.js
 // Este archivo contiene la lógica para validar el login del usuario y los datos de verificación de varios usuarios
 
-// Copiamos el contenido del archivo user.json y lo asignamos a una variable
+// Copiamos el contenido del archivo user.json y lo asignamos a una variable 1º manuel 2º maria luz 3º cristina 4º Maria lechuga 5º JBR
 var userData = [
     {
-        "username": "admin",
-        "password": "1234"
+        "username": "617694105",
+        "password": "Z4!w@7nQ"
     },
     {
-        "username": "user1",
-        "password": "abcd"
+        "username": "666995116", 
+        "password": "pH6#rT8*"
     },
     {
-        "username": "user2",
-        "password": "efgh"
+        "username": "601127872",
+        "password": "M3$g%9yA"
+    }
+    {
+        "username": "673762884",
+        "password": "cN2&uK4+"
+    }
+    {
+        "username": "636347845",
+        "password": "hJ7^sF5-"
     }
 ];
 
