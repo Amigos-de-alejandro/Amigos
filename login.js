@@ -40,7 +40,9 @@ submit.addEventListener("click", function(event) {
         }
     }
     if (loginSuccess) {
-        // Si el login es correcto, redirigimos al usuario a la página index2.htm
+        // Si el login es correcto, cambiamos el valor de la variable loginStatus a "true" y lo guardamos en localStorage
+        localStorage.setItem("loginStatus", "true");
+        // Redirigimos al usuario a la página index2.htm
         window.location.href = form.action;
     } else {
         // Si el login es incorrecto, mostramos un mensaje de error
