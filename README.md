@@ -1,1 +1,1 @@
-https://amigos-de-alejandro.github.io/Amigos/
+https://constituciones-monarquicas.github.io/Amigos-de-alejandro/
