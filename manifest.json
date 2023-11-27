@@ -9,8 +9,21 @@
   "short_name": "Amigos de alejandro",
   "start_url": "/",
   "theme_color": "#ffffff",
-  "categories": [],
-  "screenshots": [],
+  "lang": "es",
+  "version": "1.0",
+  "categories": ["social", "amistad"],
+  "screenshots": [
+    {
+      "src": "screenshot1.png",
+      "sizes": "800x600",
+      "type": "image/png"
+    },
+    {
+      "src": "screenshot2.png",
+      "sizes": "1024x768",
+      "type": "image/png"
+    }
+  ],
   "icons": [https://constituciones-monarquicas.github.io/p/logo.jpeg],
   "shortcuts": [],
   "display_override": [
@@ -18,5 +31,17 @@
     "browser",
     "window-controls-overlay"
   ],
-  "prefer_related_applications": true
+  "prefer_related_applications": true,
+  "related_applications": [
+    {
+      "platform": "play",
+      "url": "https://constituciones-monarquicas.github.io/p/",
+      "id": "com.amigosdealejandro"
+    },
+    {
+      "platform": "itunes",
+      "url": "https://constituciones-monarquicas.github.io/p/",
+      "id": "123456789"
+    }
+  ]
 }
