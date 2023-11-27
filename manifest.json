@@ -1,0 +1,22 @@
+{
+  "background_color": "#ffffff",
+  "description": "Amigos de Alejandro solo para amigos de Alejandro",
+  "dir": "auto",
+  "display": "fullscreen",
+  "name": "Amigos de alejandro",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "Amigos de alejandro",
+  "start_url": "/",
+  "theme_color": "#ffffff",
+  "categories": [],
+  "screenshots": [],
+  "icons": [https://constituciones-monarquicas.github.io/p/logo.jpeg],
+  "shortcuts": [],
+  "display_override": [
+    "fullscreen",
+    "browser",
+    "window-controls-overlay"
+  ],
+  "prefer_related_applications": true
+}
